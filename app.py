@@ -10,7 +10,7 @@ app = Flask(__name__)
 DATABASE_URL = os.environ.get('DATABASE_URL')
 if not DATABASE_URL:
     # Fallback for local testing (create a local PostgreSQL database first)
-    DATABASE_URL = "postgresql://user:password@localhost:5432/database_name"
+    DATABASE_URL = "postgresql://postgres:samie@localhost:5433/postgres"
 
 db_pool = pool.SimpleConnectionPool(1, 20, DATABASE_URL)
 
