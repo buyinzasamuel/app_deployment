@@ -7,10 +7,10 @@ app = Flask(__name__)
 # ------------------- DATABASE SETUP -------------------
 # Create a connection pool using the DATABASE_URL provided by Railway
 # If running locally, set DATABASE_URL environment variable or use a fallback
-DATABASE_URL = os.environ.get('postgresql://postgres:samie@localhost:5433/postgres')
+DATABASE_URL = os.environ.get('postgresql://user:password@localhost:5432/items')
 if not DATABASE_URL:
     # Fallback for local testing (create a local PostgreSQL database first)
-    DATABASE_URL = "postgresql://postgres:samie@localhost:5433/postgres"
+    DATABASE_URL = "postgresql://user:password@localhost:5432/items"
 
 db_pool = pool.SimpleConnectionPool(1, 20, DATABASE_URL)
 
