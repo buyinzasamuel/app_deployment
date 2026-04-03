@@ -1,1 +1,1 @@
-web: gunicorn app_deployment.app:app
+web: gunicorn app:app
